@@ -1,0 +1,5 @@
+.hidden {
+ /* Used to override other display properties,
+  * .hidden should always take highest precedence */
+  display: none !important;
+}
