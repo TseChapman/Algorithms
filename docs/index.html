@@ -2,47 +2,53 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link ref="stylesheet" href="home_page_styles.css">
-    <link ref="stylesheet" href="helper.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Mono">
+    <link rel="stylesheet" href="helper.css" />
+    <link rel="stylesheet" href="home_page_styles.css" />
+    <script src="../scripts/init.js"></script>
     <title>Algorithms</title>
   </head>
   <body>
     <nav class="home_page_nav">
-      <div id="nav_title">Algorithms</div>
-      <div id="nav_trees">Trees</div>
-      <div id="nav_graphs">Graphs</div>
-      <div id="nav_structures">Data Structures</div>
-      <div id="nav_sorting">Sorting</div>
+      <div id="nav_title" class="home_page_nav_item clickable">Algorithms</div>
+      <div id="nav_trees" class="home_page_nav_item clickable">Trees</div>
+      <div id="nav_graphs" class="home_page_nav_item clickable">Graphs</div>
+      <div id="nav_structures" class="home_page_nav_item clickable">Data Structures</div>
+      <div id="nav_sorting" class="home_page_nav_item clickable">Sorting</div>
     </nav>
     <main>
       <div id="home_page">
         <p></p>
-        <div>
+        <div class="card_container">
           <div class="card">
-            <img src="../imgs/TreeIcon.png" alt="Tree Icon">
+            <img class="card_img" src="../imgs/TreeIcon.png" alt="Tree Icon">
             <div>Trees</div>
           </div>
           <div class="card">
-            <img src="../imgs/GraphIcon.png" alt="Graph Icon">
+            <img class="card_img" src="../imgs/GraphIcon.png" alt="Graph Icon">
            <div>Graphs</div>
           </div>
           <div class="card">
-            <img src="../imgs/StructureIcon.png" alt="Data Structure Icon">
+            <img class="card_img" src="../imgs/StructureIcon.png" alt="Data Structure Icon">
             <div>Data Structures</div>
           </div>
           <div class="card">
-            <img src="../imgs/SortingIcon.png" alt="Sorting Icon">
+            <img class="card_img" src="../imgs/SortingIcon.png" alt="Sorting Icon">
             <div>Sorting</div>
           </div>
         </div>
       </div>
-      <div id="trees_page">
+      <div id="trees_page" class="hidden">
 
       </div>
-      <div id="graphs_page">
+      <div id="graphs_page" class="hidden">
 
       </div>
-      <div id="structures_page">
+      <div id="structures_page" class="hidden">
+
+      </div>
+      <div id="sorting_page" class="hidden">
 
       </div>
     </main>

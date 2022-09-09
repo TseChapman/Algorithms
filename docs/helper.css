@@ -1,3 +1,13 @@
+html, body {
+  margin: 0px;
+  font-family: 'DM Mono', serif;
+}
+
+.clickable:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .hidden {
  /* Used to override other display properties,
   * .hidden should always take highest precedence */
