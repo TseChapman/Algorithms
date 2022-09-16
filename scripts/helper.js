@@ -36,12 +36,34 @@ class Helper {
   }
 
   /**
-   * Remove all the children within the parent object
-   * @param {Object} parent Parent DOM object
+   * Remove all the children within the parent object.
+   * @param {List} parent Parent DOM object.
    */
   static removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
+    while (parent[0].firstChild) {
+        parent[0].removeChild(parent[0].firstChild);
+    }
+  }
+
+  /**
+   * Remove a class from an object if it already exists in the classList.
+   * @param {List} object DOM object that will remove a class.
+   * @param {string} className The name of the class that will be removed.
+   */
+  static removeClassIfExists(object, className) {
+    if (object[0].classList.contains(className)) {
+      object[0].classList.remove(className);
+    }
+  }
+
+  /**
+   * Add a class into an object if it does not contain the class in classList.
+   * @param {List} object DOM object that will add a class.
+   * @param {string} className The name of the class that will be added.
+   */
+  static addClassIfNotExists(object, className) {
+    if (!object[0].classList.contains(className)) {
+      object[0].classList.add(className);
     }
   }
 }
