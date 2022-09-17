@@ -1,8 +1,8 @@
 class Helper {
   /**
    * id helper function
-   * @param {String} idName name of id
-   * @return {Object} element with id name
+   * @param {String} idName name of id.
+   * @return {Object} element with id name.
    */
   static id(idName) {
     return document.getElementById(idName);
@@ -19,7 +19,7 @@ class Helper {
 
   /**
    * Returns the array of elements that match the given CSS selector.
-   * @param {string} selector - CSS query selector
+   * @param {string} selector - CSS query selector.
    * @returns {object[]} array of DOM objects matching the query.
    */
   static qsa(selector) {
@@ -40,6 +40,13 @@ class Helper {
    * @param {List} parent Parent DOM object.
    */
   static removeAllChildNodes(parent) {
+    if (parent.length != 1) {
+      console.error(
+        "Helper.removeAllChildNodes : list variable 'parent' has \
+        length not equal to 1."
+      );
+      return;
+    }
     while (parent[0].firstChild) {
         parent[0].removeChild(parent[0].firstChild);
     }
@@ -51,6 +58,13 @@ class Helper {
    * @param {string} className The name of the class that will be removed.
    */
   static removeClassIfExists(object, className) {
+    if (object.length != 1) {
+      console.error(
+        "Helper.removeClassIfExists : list variable 'object' has \
+        length not equal to 1."
+      );
+      return;
+    }
     if (object[0].classList.contains(className)) {
       object[0].classList.remove(className);
     }
@@ -62,8 +76,26 @@ class Helper {
    * @param {string} className The name of the class that will be added.
    */
   static addClassIfNotExists(object, className) {
+    if (object.length != 1) {
+      console.error(
+        "Helper.addClassIfNotExists : list variable 'object' has \
+        length not equal to 1."
+      );
+      return;
+    }
     if (!object[0].classList.contains(className)) {
       object[0].classList.add(className);
     }
   }
+
+  /**
+   * Hide all the page in the website.
+   * @param {Object} dict A dictionary that represent the key to page id.
+   */
+  static hideAllPages(dict) {
+   for (var key in dict) {
+     let page = Helper.id(dict[key]);
+     Helper.addClassIfNotExists([page], 'hidden');
+   }
+ }
 }
