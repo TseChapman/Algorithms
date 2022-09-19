@@ -19,6 +19,7 @@
     initNavButtons();
     initNavIcon();
     Homepage.initCards();
+    Treepage.initSidebarButton();
   }
 
   /**

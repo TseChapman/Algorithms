@@ -28,6 +28,10 @@
   width: 10%;
 }
 
+.sidebar_small > div {
+  display: none;
+}
+
 .sidebar button {
   position: absolute;
   border: none;
@@ -45,6 +49,9 @@
   font-size: 25px;
   padding-top: 10px;
   padding-left: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sidebar > div:hover {
