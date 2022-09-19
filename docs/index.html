@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="helper.css" />
     <link rel="stylesheet" href="home_page_styles.css" />
+    <script src="../scripts/helper.js"></script>
+    <script src="../scripts/homepage.js"></script>
     <script src="../scripts/init.js"></script>
     <title>Algorithms</title>
   </head>
   <body>
-    <nav class="home_page_nav">
+    <nav class="home_page_nav" id="nav_bar">
       <div id="nav_title" class="home_page_nav_item clickable">Algorithms</div>
       <div id="nav_trees" class="home_page_nav_item clickable">Trees</div>
       <div id="nav_graphs" class="home_page_nav_item clickable">Graphs</div>
@@ -24,19 +26,19 @@
       <div id="home_page">
         <p></p>
         <div class="card_container">
-          <div class="card">
+          <div id="trees_card" class="card">
             <img class="card_img" src="../imgs/TreeIcon.png" alt="Tree Icon">
             <div>Trees</div>
           </div>
-          <div class="card">
+          <div id="graphs_card" class="card">
             <img class="card_img" src="../imgs/GraphIcon.png" alt="Graph Icon">
            <div>Graphs</div>
           </div>
-          <div class="card">
+          <div id="structures_card" class="card">
             <img class="card_img" src="../imgs/StructureIcon.png" alt="Data Structure Icon">
             <div>Data Structures</div>
           </div>
-          <div class="card">
+          <div id="sorting_card" class="card">
             <img class="card_img" src="../imgs/SortingIcon.png" alt="Sorting Icon">
             <div>Sorting</div>
           </div>
