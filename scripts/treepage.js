@@ -1,4 +1,7 @@
 class Treepage {
+
+  constructor() {}
+
   /**
    * Initialize the button within the sidebar in tree page.
    */
