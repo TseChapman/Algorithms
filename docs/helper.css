@@ -5,7 +5,6 @@ html, body {
 
 .clickable:hover {
   cursor: pointer;
-  text-decoration: underline;
 }
 
 .hidden {

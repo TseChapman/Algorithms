@@ -17,6 +17,7 @@
    */
   function init() {
     initNavButtons();
+    initNavIcon();
     Homepage.initCards();
   }
 
@@ -32,8 +33,28 @@
         Helper.hideAllPages(navDict);
         // Display the nav specific page.
         returnToPageByNav(tempKey);
+        // Hide responsive nav bar
+        let nav = Helper.id("nav_bar");
+        if (nav.className === "home_page_nav responsive") {
+          Helper.removeClassIfExists([nav], "responsive");
+        }
       });
     }
+  }
+
+  /**
+   * Initialize the nav bar's responsive icon
+   */
+  function initNavIcon() {
+    let icon = Helper.id("nav_icon");
+    icon.addEventListener("click", function() {
+      let nav = Helper.id("nav_bar");
+      if (nav.classList.contains("responsive")) {
+        Helper.removeClassIfExists([nav], "responsive");
+      } else {
+        Helper.addClassIfNotExists([nav], "responsive");
+      }
+    });
   }
 
   /**
