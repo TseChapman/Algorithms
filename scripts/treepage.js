@@ -1,6 +1,10 @@
 class Treepage {
 
-  constructor() {}
+  constructor() {
+    this.playBar = new PlayBar();
+    this.algorithm = null;
+    this.root = null;
+  }
 
   /**
    * Initialize the button within the sidebar in tree page.
