@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="helper.css" />
     <link rel="stylesheet" href="home_page_styles.css" />
     <link rel="stylesheet" href="tree_page_styles.css" />
-    <script src="../scripts/helper.js"></script>
-    <script src="../scripts/homepage.js"></script>
-    <script src="../scripts/treepage.js"></script>
-    <script src="../scripts/init.js"></script>
+    <script src="../scripts/Helper.js"></script>
+    <script src="../scripts/Homepage.js"></script>
+    <script src="../scripts/Treepage.js"></script>
+    <script src="../scripts/Init.js"></script>
     <title>Algorithms</title>
   </head>
   <body>
@@ -56,7 +56,18 @@
             <div class="clickable">Depth-First Search (DFS)</div>
             <div class="clickable">Breath-First Search (BFS)</div>
           </div>
-          <div class="tree_content"></div>
+          <div class="tree_content">
+            <div>Max Level: 3</div>
+            <div id="treeNode_container">
+
+            </div>
+            <div valign="bottom" class="play_bar">
+              <button class="play_btn"></button>
+              <div class="vertical_sep"></div>
+              <div>Result:</div>
+              <div class="play_bar_result"></div>
+            </div>
+          </div>
         </div>
       </div>
       <div id="graphs_page" class="hidden">

@@ -16,6 +16,7 @@
 }
 
 .tree_content {
+  position: relative;
   width: 70%;
   transition: 1s ease;
 }
@@ -68,4 +69,10 @@
 
 .sidebar > button:hover {
   background-color: #c5d5cb;
+}
+
+.tree_content > div:first-child {
+  font-size: 20px;
+  padding-left: 5px;
+  float: left;
 }
